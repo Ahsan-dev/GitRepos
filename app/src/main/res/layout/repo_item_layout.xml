@@ -12,9 +12,10 @@
     <LinearLayout
         android:id="@+id/ll_repo"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:orientation="horizontal"
-        android:weightSum="6">
+        android:layout_margin="10dp"
+        android:weightSum="8">
 
         <ImageView
             android:id="@+id/iv_repo"
@@ -26,13 +27,15 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="4"
+            android:layout_weight="6"
             android:layout_marginLeft="5dp"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/tv_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 android:text="Title"/>
             <View
                 android:layout_width="0dp"
@@ -47,11 +50,37 @@
             <View
                 android:layout_width="0dp"
                 android:layout_height="5dp"/>
-            <TextView
-                android:id="@+id/tv_owner"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Owner"/>
+                android:orientation="horizontal"
+                android:weightSum="17">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/image_owner"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_launcher_round"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_owner"
+                    android:layout_width="0dp"
+                    android:layout_weight="15"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Owner"/>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 

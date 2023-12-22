@@ -23,10 +23,7 @@ class DetailsActivity : AppCompatActivity() {
         val repo: Item? = intent.getSerializable(Constants.SEND_REPO, Item::class.java)
 
         binding.tvDetailTitle.text = repo?.name
-        binding.ivOwner.load(repo?.owner?.avatar_url) {
-            placeholder(R.drawable.placeholder)
-            error(R.drawable.placeholder)
-        }
+        binding.tvDetailsOwnerName.text = "Owner: ${repo?.name}"
         binding.textView2.text = repo?.description
 
 
