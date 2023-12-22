@@ -41,7 +41,7 @@ class MainViewModel @Inject constructor(private val repository: RepoRepository):
             val response = repository.getAllRepos(currentPage)
             withContext(Dispatchers.Main){
                 isLoading.postValue(false)
-                repoResponse.value = response
+                moreRepoResponse.value = response
             }
         }
     }

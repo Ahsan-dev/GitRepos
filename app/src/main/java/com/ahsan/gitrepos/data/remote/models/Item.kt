@@ -1,5 +1,7 @@
 package com.ahsan.gitrepos.data.remote.models
 
+import java.io.Serializable
+
 data class Item(
     val allow_forking: Boolean,
     val archive_url: String,
@@ -81,4 +83,4 @@ data class Item(
     val watchers: Int,
     val watchers_count: Int,
     val web_commit_signoff_required: Boolean
-)
+):Serializable
